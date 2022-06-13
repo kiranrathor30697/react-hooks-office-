@@ -1,10 +1,11 @@
-import React, { createRef } from 'react';
+import React, { createRef, useRef } from 'react';
 import '../../App.css'
 
 export const UseRefHook = () => {
 
-  const myRef = createRef();
-  const myRef2 = createRef();
+  // const myRef = createRef();
+  const myRef = useRef();
+  const myRef2 = useRef();
 
   const handleClick = (e) => {
     e.preventDefault();
