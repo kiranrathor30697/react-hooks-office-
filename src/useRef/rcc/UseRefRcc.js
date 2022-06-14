@@ -1,4 +1,4 @@
-import React, { Component, createRef, useRef } from 'react';
+import React, { Component, createRef } from 'react';
 import '../../App.css'
 
 export default class UseRefRcc extends Component {
@@ -15,7 +15,7 @@ export default class UseRefRcc extends Component {
   render() {
     return (
       <div className='App App-header'>
-        useRef Hook Rcc
+        createRef Hook Rcc
         <form className='border mt-2 rounded p-3'>
           <h2>Create Ref Function</h2>
           <input className='form-control' ref={this.myRef} autoFocus placeholder='Enter value' />
