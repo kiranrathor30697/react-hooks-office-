@@ -7,15 +7,22 @@ export default function UseReducer() {
     name:'Kiran Rathor'
   })
 
-let rootReducer = (initialData,action) => {
+  const [number,setNumber] = useState({
+    count:0
+  })
+
+let rootReducer = (number,initialData,action) => {
   
   switch(action.type){
     case 'change_Name':
      return setInitialData({...initialData,name:'Anjali Rathor'})
-    
+    case 'Increment':
+    return {count:number.count+1}
+    case 'Decrement ':
+      return number = number-1
     default:
   }
-  return initialData;
+  return initialData; 
 }
 
   const [action,dispatch] = useReducer(rootReducer,initialData)
@@ -25,6 +32,7 @@ let rootReducer = (initialData,action) => {
       type:"change_Name",
     })
   }
+
   return (
     <div className='App App-header '>
       <div className='border border-info p-3 rounded'>
@@ -32,6 +40,7 @@ let rootReducer = (initialData,action) => {
         <h4>{initialData.name}</h4>
         <button className='btn btn-secondary' onClick={()=>{handleClick()}} >Change Name</button>
       </div>
+
     </div>
   )
 }
