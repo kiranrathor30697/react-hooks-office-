@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import UseCallBack from './useCallbackHook/UseCallBack';
+import UseMemo from './useMemoHook/UseMemo';
 import CountNumberReducer from './UseReducerHook/CountNumberReducer';
 // import CompParent from './useContext/rcc/CompParent';
 // import App from './useContext/rfc/App'
@@ -16,7 +18,9 @@ root.render(
     {/* <CompParent /> */}
     {/* <UseRefRcc /> */}
     {/* <UseReducer /> */}
-    <CountNumberReducer />
+    {/* <CountNumberReducer /> */}
+    {/* <UseMemo /> */}
+    <UseCallBack />
   </React.StrictMode>
 );
 
